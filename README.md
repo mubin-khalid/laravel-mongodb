@@ -26,7 +26,7 @@ Make sure you have the MongoDB PHP driver installed. You can find installation i
 Installation using composer:
 
 ```
-composer require jenssegers/mongodb
+composer require mubin-khalid/mongodb
 ```
 
 ### Laravel version Compatibility
