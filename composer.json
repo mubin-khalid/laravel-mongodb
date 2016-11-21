@@ -1,0 +1,37 @@
+{
+    "name": "mubin-khalid/mongodb",
+    "description": "A MongoDB based Eloquent model and Query builder for Laravel (Moloquent)",
+    "keywords": ["laravel","eloquent","mongodb","mongo","database","model","moloquent"],
+    "homepage": "https://github.com/mubin-khalid/laravel-mongodb",
+    "authors": [
+        {
+            "name": "Mubin Khalid, Yousaf Bilal"
+        }
+    ],
+    "license" : "MIT",
+    "require": {
+        "illuminate/support": "^5.1",
+        "illuminate/container": "^5.1",
+        "illuminate/database": "^5.1",
+        "illuminate/events": "^5.1",
+        "mongodb/mongodb": "^1.0.0"
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.0|^5.0",
+        "orchestra/testbench": "^3.1",
+        "mockery/mockery": "^0.9",
+        "satooshi/php-coveralls": "^0.6"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mubin\\Mongodb": "src/",
+            "Mubin\\Eloquent": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+
+        ]
+    }
+}
