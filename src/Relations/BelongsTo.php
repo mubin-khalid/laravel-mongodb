@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb\Relations;
+<?php namespace Mubin\Mongodb\Relations;
 
 class BelongsTo extends \Illuminate\Database\Eloquent\Relations\BelongsTo
 {

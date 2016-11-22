@@ -1,8 +1,8 @@
-<?php namespace Jenssegers\Mongodb;
+<?php namespace Mubin\Mongodb;
 
 use Illuminate\Support\ServiceProvider;
-use Jenssegers\Mongodb\Eloquent\Model;
-use Jenssegers\Mongodb\Queue\MongoConnector;
+use Mubin\Mongodb\Eloquent\Model;
+use Mubin\Mongodb\Queue\MongoConnector;
 
 class MongodbServiceProvider extends ServiceProvider
 {

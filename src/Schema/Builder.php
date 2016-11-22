@@ -1,7 +1,7 @@
-<?php namespace Jenssegers\Mongodb\Schema;
+<?php namespace Mubin\Mongodb\Schema;
 
 use Closure;
-use Jenssegers\Mongodb\Connection;
+use Mubin\Mongodb\Connection;
 
 class Builder extends \Illuminate\Database\Schema\Builder
 {

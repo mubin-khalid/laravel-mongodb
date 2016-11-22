@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb\Eloquent;
+<?php namespace Mubin\Mongodb\Eloquent;
 
 use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Eloquent\Relations\Relation;

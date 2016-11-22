@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb\Auth;
+<?php namespace Mubin\Mongodb\Auth;
 
 use Illuminate\Auth\Passwords\PasswordResetServiceProvider as BasePasswordResetServiceProvider;
 

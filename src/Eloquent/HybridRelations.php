@@ -1,13 +1,13 @@
-<?php namespace Jenssegers\Mongodb\Eloquent;
+<?php namespace Mubin\Mongodb\Eloquent;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Support\Str;
-use Jenssegers\Mongodb\Relations\BelongsTo;
-use Jenssegers\Mongodb\Relations\BelongsToMany;
-use Jenssegers\Mongodb\Relations\HasMany;
-use Jenssegers\Mongodb\Relations\HasOne;
-use Jenssegers\Mongodb\Relations\MorphTo;
+use Mubin\Mongodb\Relations\BelongsTo;
+use Mubin\Mongodb\Relations\BelongsToMany;
+use Mubin\Mongodb\Relations\HasMany;
+use Mubin\Mongodb\Relations\HasOne;
+use Mubin\Mongodb\Relations\MorphTo;
 
 trait HybridRelations
 {

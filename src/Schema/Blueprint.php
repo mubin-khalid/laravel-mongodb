@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb\Schema;
+<?php namespace Mubin\Mongodb\Schema;
 
 use Closure;
 use Illuminate\Database\Connection;

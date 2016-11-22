@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb\Query;
+<?php namespace Mubin\Mongodb\Query;
 
 use Closure;
 use DateTime;
@@ -6,7 +6,7 @@ use Illuminate\Database\Query\Builder as BaseBuilder;
 use Illuminate\Database\Query\Expression;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
-use Jenssegers\Mongodb\Connection;
+use Mubin\Mongodb\Connection;
 use MongoDB\BSON\ObjectID;
 use MongoDB\BSON\Regex;
 use MongoDB\BSON\UTCDateTime;

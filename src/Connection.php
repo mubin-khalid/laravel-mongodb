@@ -1,4 +1,4 @@
-<?php namespace Jenssegers\Mongodb;
+<?php namespace Mubin\Mongodb;
 
 use MongoDB\Client;
 
