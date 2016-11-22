@@ -256,7 +256,7 @@ class Builder extends BaseBuilder
             ];
 
             // Execute aggregation
-            $results = iterator_to_array($this->collection->aggregate($pipeline, $options));
+            $results = $this->iterate($this->collection->aggregate($pipeline, $options));
 
             // Return results
             return $results;
@@ -317,8 +317,30 @@ class Builder extends BaseBuilder
             $cursor = $this->collection->find($wheres, $options);
 
             // Return results as an array with numeric keys
-            return iterator_to_array($cursor, false);
+            return $this->iterate($cursor);
         }
+    }
+
+    /**
+     * Iterate over the Cursor and return plain array.
+     * @param $cursor
+     * @return array
+     */
+    public function iterate($cursor)
+    {
+        $final = [];
+        $item_num = 0;
+        foreach ($cursor as $item) {
+            foreach ($item as $key => $value) {
+                if($key == '_id') {
+                    $final[$item_num][$key]['$id'] = $value->__toString();
+                } else {
+                    $final[$item_num][$key] = $value;
+                }
+            }
+            $item_num += 1;
+        }
+        return $final;
     }
 
     /**
@@ -485,20 +507,23 @@ class Builder extends BaseBuilder
      *
      * @param  array   $values
      * @param  string  $sequence
-     * @return int
+     * @return array
      */
     public function insertGetId(array $values, $sequence = null)
     {
         $result = $this->collection->insertOne($values);
 
-        if (1 == (int) $result->isAcknowledged()) {
+        if($result){
+            return [ '$id' => $result->getInsertedId()->__toString()];
+        }
+        /*if (1 == (int) $result->isAcknowledged()) {
             if (is_null($sequence)) {
                 $sequence = '_id';
             }
 
             // Return id
             return $sequence == '_id' ? $result->getInsertedId() : $values[$sequence];
-        }
+        }*/
     }
 
     /**
